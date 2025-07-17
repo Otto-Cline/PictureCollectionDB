@@ -1,24 +1,12 @@
-CREATE TABLE IF NOT EXISTS collections (
+CREATE TABLE IF NOT EXISTS subjects (
     id SERIAL PRIMARY KEY,
-    name VARCHAR UNIQUE
+    main_heading TEXT,
+    subheading TEXT,
+    sub_subheading TEXT,
+    year TEXT,
+    call_symbol TEXT,
+    subheading_call_symbol TEXT,
+    year_call_symbol TEXT
 );
 
-CREATE TABLE IF NOT EXISTS images (
-    id SERIAL PRIMARY KEY,
-    title VARCHAR,
-    creator VARCHAR,
-    date VARCHAR,
-    source_url VARCHAR,
-    collection_id INTEGER REFERENCES collections(id)
-);
 
-CREATE TABLE IF NOT EXISTS tags (
-    id SERIAL PRIMARY KEY,
-    name VARCHAR UNIQUE
-);
-
-CREATE TABLE IF NOT EXISTS image_tag (
-    image_id INTEGER REFERENCES images(id),
-    tag_id INTEGER REFERENCES tags(id),
-    PRIMARY KEY (image_id, tag_id)
-);

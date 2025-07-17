@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-14224||-9223372036854775808|c|G
-14224||10|c|G
-14224||10|C|G
-14224||10|T|G</Grants>
-      <IntrospectionStateNumber>739</IntrospectionStateNumber>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
       <ServerVersion>14.18</ServerVersion>
       <StartupTime>1752450564</StartupTime>
       <TimeZones>true ACDT
@@ -810,7 +802,7 @@ false Zulu
 13859||10|C|G
 13859||-9223372036854775808|U|G
 13859||10|U|G</Grants>
-      <IntrospectionStateNumber>739</IntrospectionStateNumber>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
       <ObjectId>16384</ObjectId>
       <OwnerName>ottocline</OwnerName>
     </database>
@@ -4240,265 +4232,92 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>739</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-07-14.23:54:07</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>758</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-07-17.17:03:20</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>ottocline</OwnerName>
     </schema>
-    <sequence id="263" parent="262" name="collections_id_seq">
-      <ObjectId>16396</ObjectId>
+    <sequence id="263" parent="262" name="subjects_id_seq">
+      <ObjectId>16450</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>734</StateNumber>
+      <StateNumber>745</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>ottocline</OwnerName>
     </sequence>
-    <sequence id="264" parent="262" name="images_id_seq">
-      <ObjectId>16407</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>ottocline</OwnerName>
-    </sequence>
-    <sequence id="265" parent="262" name="tags_id_seq">
-      <ObjectId>16385</ObjectId>
-      <SequenceIdentity>1</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <OwnerName>ottocline</OwnerName>
-    </sequence>
-    <table id="266" parent="262" name="collections">
-      <ObjectId>16397</ObjectId>
-      <StateNumber>734</StateNumber>
+    <table id="264" parent="262" name="subjects">
+      <ObjectId>16451</ObjectId>
+      <StateNumber>745</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>ottocline</OwnerName>
     </table>
-    <table id="267" parent="262" name="image_tag">
-      <ObjectId>16421</ObjectId>
-      <StateNumber>734</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>ottocline</OwnerName>
-    </table>
-    <table id="268" parent="262" name="images">
-      <ObjectId>16408</ObjectId>
-      <StateNumber>734</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>ottocline</OwnerName>
-    </table>
-    <table id="269" parent="262" name="tags">
-      <ObjectId>16386</ObjectId>
-      <StateNumber>734</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>ottocline</OwnerName>
-    </table>
-    <column id="270" parent="266" name="id">
-      <DefaultExpression>nextval(&apos;collections_id_seq&apos;::regclass)</DefaultExpression>
+    <column id="265" parent="264" name="id">
+      <DefaultExpression>nextval(&apos;subjects_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>734</StateNumber>
+      <StateNumber>745</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>16396</SequenceId>
+      <SequenceId>16450</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="271" parent="266" name="name">
+    <column id="266" parent="264" name="main_heading">
       <Position>2</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
     </column>
-    <index id="272" parent="266" name="collections_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16403</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="273" parent="266" name="collections_name_key">
-      <ColNames>name</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16405</ObjectId>
-      <StateNumber>734</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <key id="274" parent="266" name="collections_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16404</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16403</UnderlyingIndexId>
-    </key>
-    <key id="275" parent="266" name="collections_name_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16406</ObjectId>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16405</UnderlyingIndexId>
-    </key>
-    <column id="276" parent="267" name="image_id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="277" parent="267" name="tag_id">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <foreign-key id="278" parent="267" name="image_tag_image_id_fkey">
-      <ColNames>image_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16426</ObjectId>
-      <StateNumber>734</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16408</RefTableId>
-    </foreign-key>
-    <foreign-key id="279" parent="267" name="image_tag_tag_id_fkey">
-      <ColNames>tag_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16431</ObjectId>
-      <StateNumber>734</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16386</RefTableId>
-    </foreign-key>
-    <index id="280" parent="267" name="image_tag_pkey">
-      <ColNames>image_id
-tag_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16424</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="281" parent="267" name="image_tag_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16425</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16424</UnderlyingIndexId>
-    </key>
-    <column id="282" parent="268" name="id">
-      <DefaultExpression>nextval(&apos;images_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>16407</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="283" parent="268" name="title">
-      <Position>2</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="284" parent="268" name="creator">
+    <column id="267" parent="264" name="subheading">
       <Position>3</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
     </column>
-    <column id="285" parent="268" name="date">
+    <column id="268" parent="264" name="sub_subheading">
       <Position>4</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
     </column>
-    <column id="286" parent="268" name="source_url">
+    <column id="269" parent="264" name="year">
       <Position>5</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
     </column>
-    <column id="287" parent="268" name="collection_id">
+    <column id="270" parent="264" name="call_symbol">
       <Position>6</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
     </column>
-    <foreign-key id="288" parent="268" name="images_collection_id_fkey">
-      <ColNames>collection_id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16416</ObjectId>
-      <StateNumber>734</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16397</RefTableId>
-    </foreign-key>
-    <index id="289" parent="268" name="images_pkey">
+    <column id="271" parent="264" name="subheading_call_symbol">
+      <Position>7</Position>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="272" parent="264" name="year_call_symbol">
+      <Position>8</Position>
+      <StateNumber>745</StateNumber>
+      <StoredType>text|0s</StoredType>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="273" parent="264" name="subjects_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16414</ObjectId>
+      <ObjectId>16457</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
+      <StateNumber>745</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="290" parent="268" name="images_pkey">
+    <key id="274" parent="264" name="subjects_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16415</ObjectId>
+      <ObjectId>16458</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16414</UnderlyingIndexId>
-    </key>
-    <column id="291" parent="269" name="id">
-      <DefaultExpression>nextval(&apos;tags_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <SequenceId>16385</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="292" parent="269" name="name">
-      <Position>2</Position>
-      <StateNumber>734</StateNumber>
-      <StoredType>varchar|0s</StoredType>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="293" parent="269" name="tags_pkey">
-      <ColNames>id</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16392</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <index id="294" parent="269" name="tags_name_key">
-      <ColNames>name</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16394</ObjectId>
-      <StateNumber>734</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <key id="295" parent="269" name="tags_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16393</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16392</UnderlyingIndexId>
-    </key>
-    <key id="296" parent="269" name="tags_name_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16395</ObjectId>
-      <StateNumber>734</StateNumber>
-      <UnderlyingIndexId>16394</UnderlyingIndexId>
+      <StateNumber>745</StateNumber>
+      <UnderlyingIndexId>16457</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

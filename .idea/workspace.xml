@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8226f1df-564d-4a0c-a2b5-0d58631a9767" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/PCIndex.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/855ff8db-bebd-4462-96fc-000d653d0ce8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/855ff8db-bebd-4462-96fc-000d653d0ce8.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/855ff8db-bebd-4462-96fc-000d653d0ce8/storage_v2/_src_/database/nypl.B9UzAA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/855ff8db-bebd-4462-96fc-000d653d0ce8/storage_v2/_src_/database/nypl.B9UzAA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +58,11 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PictureCollectionDB" />
@@ -99,7 +110,7 @@
       <updated>1750541406408</updated>
       <workItem from="1750541407461" duration="2292000" />
       <workItem from="1750693519643" duration="17203000" />
-      <workItem from="1752536096347" duration="2929000" />
+      <workItem from="1752536096347" duration="22073000" />
     </task>
     <servers />
   </component>
@@ -107,6 +118,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PictureCollectionDB$main.coverage" NAME="main Coverage Results" MODIFIED="1752537114501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PictureCollectionDB$main.coverage" NAME="main Coverage Results" MODIFIED="1752771488360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
