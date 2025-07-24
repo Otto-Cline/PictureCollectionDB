@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Search</title></head>
+<body>
+  <form method="post">
+    <input type="text" name="query" placeholder="Search subjects...">
+    <input type="submit" value="Search">
+  </form>
+
+  <ul>
+    {% for result in results %}
+      <li><strong>{{ result.main_heading }}</strong>- {{ result.year }}: {{ result.see_alsos }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
