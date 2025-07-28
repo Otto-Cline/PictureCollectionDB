@@ -41,10 +41,11 @@ def search():
             except:
                 see_alsos = []
 
-            heading_match = query == row.main_heading.lower()
+            heading_match = query in row.main_heading.lower()
             see_also_match = any(query == term.lower() for term in see_alsos)
+            year_match = query in (row.year or '').lower()
 
-            if heading_match or see_also_match:
+            if heading_match or see_also_match or year_match:
                 g = grouped[row.main_heading]
                 g["see_alsos"].update(see_alsos)
 
