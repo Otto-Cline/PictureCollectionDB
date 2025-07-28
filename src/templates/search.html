@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<html>
-<head><title>Search</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subject Search</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 <body>
-  <form method="post">
-    <input type="text" name="query" placeholder="Search subjects...">
-    <input type="submit" value="Search">
-  </form>
+  <div class="container">
+    <h1>Picture Collection Heading Catalog</h1>
+    <h2>See if we have what you're looking for! Search by heading or year.</h2>
+    <form method="post" class="search-form">
+      <input type="text" name="query" placeholder="Search by heading or year..." required>
+      <button type="submit">Search</button>
+    </form>
 
-  <ul>
-    {% for result in results %}
-      <li><strong>{{ result.main_heading }}</strong>- {{ result.year }}: {{ result.see_alsos }}</li>
-    {% endfor %}
-  </ul>
+    <!-- the things in the brackets are Jinja2, which is the templating language
+          flask uses to render html dynamically. here, we're looping through the array of
+          see alsos and just outputting them.-->
+
+    <ul class="results">
+  {% for result in results %}
+    <li>
+      <h2>{{ result.main_heading }}</h2>
+
+      {% if result.subheadings %}
+        <details class="dropdown">
+          <summary>Subheadings ({{ result.subheadings|length }})</summary>
+          <ul>
+            {% for sub in result.subheadings %}
+              <li>{{ sub }}</li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
+
+      {% if result.see_alsos %}
+        <details class="dropdown">
+          <summary>See Also ({{ result.see_alsos|length }})</summary>
+          <ul>
+            {% for also in result.see_alsos %}
+              <li>{{ also }}</li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+  </div>
 </body>
 </html>
