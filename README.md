@@ -1,11 +1,12 @@
 # PictureCollectionDB
 
-A Python + PostgreSQL project to store and query image metadata, using a custom SQL schema and command-line interface.
+A Python + PostgreSQL project to store and query Picture Collection heading metadata.
 
 ## Features
-- Stores image metadata (title, creator, date, tags, collection, source URL)
+- Uses language transformer to generate related terms to any given heading.
+- Stores heading metadata (heading, subheading, sub-subheading, year range, related terms)
 - Custom SQL schema
-- Command-line interface for database setup and querying
+- Website interface using Flask (hosted on Render, db hosted on Neon).
 
  
 ### Clone the repo:
